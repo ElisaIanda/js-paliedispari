@@ -26,17 +26,19 @@
     <main>
 
         <div class="container">
-            <h1>Inserisci una parola Palindroma</h1>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col">
-                    <div class="input-group flex-nowrap">
-                        <input type="text" id="input-word" class="form-control" placeholder="Inserisci Parola" aria-label=""
-                            aria-describedby="addon-wrapping">
+                    <div class="box">
+                        <label for="input-word" class="form-label fw-medium fs-5">Inserisci una parola</label>
+                        <input type="text" name="input-word" id="input-word" class="form-control">
                     </div>
+                    <button class="btn btn-success" id="btn">Invia</button>
                 </div>
-                <div class="col">
-                    <button type="button" id="button" class="btn btn-success">Genera</button>
-                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box d-flex justify-content-center p-4">
+                <p id="result-input" class="fw-medium fs-4"></p>
             </div>
         </div>
 
