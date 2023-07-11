@@ -14,8 +14,6 @@ const chose = document.getElementById("chose");
 const choseNumber = document.getElementById("chose-number");
 const sommaNumber = document.getElementById("somma-number");
 const numberRandom = document.getElementById("random-number");
-let somma = ""
-
 
 btn.addEventListener("click", function () {
 
@@ -28,9 +26,11 @@ btn.addEventListener("click", function () {
     const pcNumber = randomNumber();
     console.log("Numero del pc: " + pcNumber);
 
-    const result = evenOdd(somma);
-    console.log("risultato: " + result);
+    sum = usernumber + pcNumber
+    console.log("somma:" + sum)
 
+    const result = evenOdd(sum);
+    console.log("risultato: " + result);
 
     if (result === pariDispari) {
         document.getElementById("result").innerHTML = `Hai Vinto`
@@ -43,21 +43,20 @@ btn.addEventListener("click", function () {
 })
 
 
-function randomNumber(max) {
+function randomNumber() {
     
-    if (typeof max !== "number") {
-        max = 5;
-    }
+    // if (typeof max !== "number") {
+    //     max = 5;
+    // }
 
-    const num = Math.floor(Math.random() * max);
+    const random = Math.floor(Math.random() * 5) + 1;
 
-    numberRandom.innerHTML = "Il numero random è" + " " + num;
-
-    somma = usernumber + num;
+    numberRandom.innerHTML = "Il numero random è" + " " + random;
 
     // server per esporre fuori dalla funzione un valore qualsiasi
-    return num;
+    return random;
 }
+
 
 // Creo funzione che controlla se il numero inserito è pari o dispari
 function evenOdd(n) {
