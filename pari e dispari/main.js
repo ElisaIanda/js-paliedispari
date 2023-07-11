@@ -14,6 +14,7 @@ const chose = document.getElementById("chose");
 const choseNumber = document.getElementById("chose-number");
 const sommaNumber = document.getElementById("somma-number");
 const numberRandom = document.getElementById("random-number");
+let sum = 0;
 
 btn.addEventListener("click", function () {
 
@@ -26,8 +27,8 @@ btn.addEventListener("click", function () {
     const pcNumber = randomNumber();
     console.log("Numero del pc: " + pcNumber);
 
-    sum = usernumber + pcNumber
-    console.log("somma:" + sum)
+    sum = number + pcNumber;
+    console.log("somma:" + sum);
 
     const result = evenOdd(sum);
     console.log("risultato: " + result);
